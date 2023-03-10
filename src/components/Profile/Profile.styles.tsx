@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { lighten, darken } from "polished";
 
 export const Avatar = styled.img`
   width: 42px;
@@ -20,6 +21,17 @@ export const Wrapper = styled.div`
   background: ${(props) => props.theme.background.default};
   padding: 12px 16px;
   border-radius: 10px;
+  transition: 0.1s background;
+`;
+
+export const WrapperClickable = styled(Wrapper)`
+  :hover {
+    background: ${(props) => lighten(0.05, props.theme.background.default)};
+  }
+
+  :active {
+    background: ${(props) => darken(0.05, props.theme.background.default)};
+  }
 `;
 
 export const Container = styled.div`

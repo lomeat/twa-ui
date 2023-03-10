@@ -10,11 +10,12 @@ export function Profile({
   nickname,
   avatarUrl,
   className,
-  isArrow,
   onClick,
 }: T.ProfileProps) {
+  const Wrapper = onClick ? S.WrapperClickable : S.Wrapper;
+
   return (
-    <S.Wrapper className={className} onClick={onClick}>
+    <Wrapper className={className} onClick={onClick}>
       <S.Container>
         <S.Avatar src={avatarUrl} />
         <S.Names>
@@ -22,7 +23,7 @@ export function Profile({
           <S.Nickname>{nickname}</S.Nickname>
         </S.Names>
       </S.Container>
-      {isArrow && <ArrowIcon />}
-    </S.Wrapper>
+      {onClick && <ArrowIcon />}
+    </Wrapper>
   );
 }

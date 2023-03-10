@@ -3,6 +3,5 @@ export type ProfileProps = {
   nickname: string;
   avatarUrl?: string;
   className?: string;
-  isArrow?: boolean;
   onClick?: (value?: unknown) => void;
 };
