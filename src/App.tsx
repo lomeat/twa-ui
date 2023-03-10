@@ -28,6 +28,8 @@ const Wrapper = styled.div`
   width: 100vw;
   height: 100vh;
   background: ${(props) => props.theme.background.wrapper};
+  padding: 40px;
+  box-sizing: border-box;
 
   display: grid;
   gap: 20px;
@@ -41,7 +43,7 @@ const Container = styled.div<{ height: number }>`
   align-items: flex-start;
   padding: 20px;
   gap: 20px;
-  border-radius: 6px;
+  border-radius: 10px;
   border: 1px solid ${(props) => props.theme.text.default};
 
   background: ${(props) => props.theme.background.wrapper};
