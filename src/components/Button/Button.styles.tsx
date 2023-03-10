@@ -37,7 +37,7 @@ export const DisableButton = styled(Wrapper)`
 `;
 
 export const Block = styled(Wrapper)`
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.05);
   color: transparent;
   position: absolute;
   top: 0;

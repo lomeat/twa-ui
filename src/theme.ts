@@ -6,7 +6,7 @@ export const lightTheme: Theme = {
     gray: "#eeeeee",
   },
   text: {
-    default: "#E2E2E4",
+    default: "black",
     button: "#222431",
     link: "#6DDBB8",
   },

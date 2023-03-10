@@ -10,10 +10,14 @@ export function App() {
   return (
     <ThemeProvider>
       <Wrapper>
-        <Button onClick={() => {}}>Button</Button>
-        <Button isDisable onClick={() => {}}>
-          Button
-        </Button>
+        <Container height={600}>
+          <H3>Primary default button</H3>
+          <Button onClick={() => {}}>Button</Button>
+          <H3>Disabled button</H3>
+          <Button isDisable onClick={() => {}}>
+            Button
+          </Button>
+        </Container>
       </Wrapper>
       <ChangeThemeButton onClick={() => changeTheme()}>T</ChangeThemeButton>
     </ThemeProvider>
@@ -21,16 +25,31 @@ export function App() {
 }
 
 const Wrapper = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background: ${(props) => props.theme.background.wrapper};
+
+  display: grid;
+  gap: 20px;
+`;
+
+const Container = styled.div<{ height: number }>`
   display: flex;
   flex-direction: column;
-  width: 400px;
-  align-items: center;
-  margin: 100px auto;
+  width: 300px;
+  height: ${(props) => props.height}px;
+  align-items: flex-start;
   padding: 20px;
   gap: 20px;
   border-radius: 6px;
+  border: 1px solid ${(props) => props.theme.text.default};
 
   background: ${(props) => props.theme.background.wrapper};
+`;
+
+const H3 = styled.h3`
+  color: ${(props) => props.theme.text.default};
+  font-family: sans-serif;
 `;
 
 const ChangeThemeButton = styled.button`
@@ -40,6 +59,6 @@ const ChangeThemeButton = styled.button`
   width: 40px;
   height: 40px;
   color: black;
-  background: ${(props) => props.theme.background.button}
+  background: ${(props) => props.theme.background.button};
   border-radius: 50%;
 `;
