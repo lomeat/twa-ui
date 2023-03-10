@@ -8,6 +8,7 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     margin: 0;
     font-family: 'SF-Regular';
+    font-size: 12px;
   }
 
   @font-face {

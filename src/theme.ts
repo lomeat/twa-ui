@@ -7,7 +7,7 @@ export const lightTheme: Theme = {
   },
   text: {
     default: "black",
-    button: "#222431",
+    button: "#eee",
     link: "#6DDBB8",
     hint: "#E2E2E4",
   },

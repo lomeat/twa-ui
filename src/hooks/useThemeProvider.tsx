@@ -24,5 +24,5 @@ export function useThemeProvider() {
     return <StThemeProvider theme={theme}>{props.children}</StThemeProvider>;
   }
 
-  return { theme, changeTheme, ThemeProvider };
+  return { theme, changeTheme, ThemeProvider, isDark };
 }
