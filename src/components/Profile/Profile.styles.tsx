@@ -12,6 +12,8 @@ export const Avatar = styled.img`
 export const Wrapper = styled.div`
   display: flex;
   align-items: center;
+  width: 100%;
+  box-sizing: border-box;
 
   background: ${(props) => props.theme.background.default};
   padding: 12px 16px;
