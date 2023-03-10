@@ -7,6 +7,7 @@ export const Avatar = styled.img`
   border-radius: 100%;
   display: block;
   background: blue;
+  cursor: pointer;
 `;
 
 export const Wrapper = styled.div`
@@ -14,21 +15,27 @@ export const Wrapper = styled.div`
   align-items: center;
   width: 100%;
   box-sizing: border-box;
+  justify-content: space-between;
 
   background: ${(props) => props.theme.background.default};
   padding: 12px 16px;
   border-radius: 10px;
+`;
+
+export const Container = styled.div`
+  display: flex;
+  align-items: center;
   gap: 10px;
 `;
 
 export const Names = styled.div`
   display: flex;
   flex-direction: column;
-  align-item: flex-start;
   gap: 4px;
 
   font-size: 12px;
   letter-spacing: 6%;
+  cursor: pointer;
 `;
 
 export const Name = styled.span`

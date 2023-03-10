@@ -1,6 +1,4 @@
-import IconSvg from "./icon.svg";
-
-export function Icon() {
+export function ExmapleIcon() {
   return (
     <svg
       width="24px"
