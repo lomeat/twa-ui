@@ -32,10 +32,11 @@ export const Names = styled.div`
 `;
 
 export const Name = styled.span`
+  font-family: "SF-Light", sans-serif;
   color: ${(props) => props.theme.text.default};
 `;
 
 export const Nickname = styled.span`
-  font-weight: 300;
+  font-family: "SF-Light", sans-serif;
   color: ${(props) => props.theme.text.hint};
 `;

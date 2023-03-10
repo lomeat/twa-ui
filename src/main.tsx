@@ -7,6 +7,35 @@ const GlobalStyles = createGlobalStyle`
   * {
     padding: 0;
     margin: 0;
+    font-family: 'SF-Regular';
+  }
+
+  @font-face {
+    font-family: "SF-Light";
+    src: local("SF-Light"),
+    url("./fonts/SF-Light.otf");
+    font-weight: 300;
+  }
+
+  @font-face {
+    font-family: "SF-Medium";
+    src: local("SF-Medium"),
+    url("./fonts/SF-Medium.otf");
+    font-weight: 500
+  }
+
+  @font-face {
+    font-family: "SF-Regular";
+    src: local("SF-Regular"),
+    url("./fonts/SF-Regular.otf");
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: "SF-Semibold";
+    src: local("SF-Semibold"),
+    url("./fonts/SF-Semibold.otf");
+    font-weight: 600;
   }
 `;
 

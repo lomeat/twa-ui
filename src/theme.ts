@@ -24,7 +24,7 @@ export const darkTheme: Theme = {
     default: "#E2E2E4",
     button: "#222431",
     link: "#6DDBB8",
-    hint: "#E2E2E4",
+    hint: "#9898AE",
   },
 };
 

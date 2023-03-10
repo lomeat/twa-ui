@@ -43,6 +43,7 @@ export const Container = styled.div<{
   align?: T.ButtonAlign;
   iconAlign?: T.IconAlign;
 }>`
+  font-family: "SF-Medium";
   width: 100%;
   display: flex;
   align-items: center;
