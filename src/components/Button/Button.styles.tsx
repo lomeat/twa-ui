@@ -3,12 +3,6 @@ import { darken } from "polished";
 
 export const Wrapper = styled.button<{ isDisable?: boolean }>`
   padding: 14px 90px;
-  background: ${(props) =>
-    props.isDisable
-      ? props.theme.background.default
-      : props.theme.background.button};
-  color: ${(props) =>
-    props.isDisable ? props.theme.text.default : props.theme.text.button};
   position: relative;
 
   font-size: 12px;
@@ -18,6 +12,11 @@ export const Wrapper = styled.button<{ isDisable?: boolean }>`
   border-radius: 10px;
   border: 0;
   cursor: pointer;
+`;
+
+export const DefaultButton = styled(Wrapper)`
+  background: ${(props) => props.theme.background.button};
+  color: ${(props) => props.theme.text.button};
 
   ${(props) =>
     !props.isDisable &&
@@ -32,10 +31,14 @@ export const Wrapper = styled.button<{ isDisable?: boolean }>`
     `}
 `;
 
-export const Block = styled.div`
-  width: inherit;
-  height: inherit;
-  background: rgba(0, 0, 0, 0.05);
+export const DisableButton = styled(Wrapper)`
+  background: ${(props) => props.theme.background.default};
+  color: ${(props) => props.theme.text.default};
+`;
+
+export const Block = styled(Wrapper)`
+  background: rgba(0, 0, 0, 0.1);
+  color: transparent;
   position: absolute;
   top: 0;
   left: 0;

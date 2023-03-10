@@ -11,10 +11,12 @@ type ButtonProps = {
 export function Button(props: ButtonProps) {
   const { children, onClick, ...rest } = props;
 
+  const Wrapper = props.isDisable ? S.DisableButton : S.DefaultButton;
+
   return (
-    <S.Wrapper onClick={props.isDisable ? () => {} : onClick} {...rest}>
-      {props.isDisable && <S.Block />}
+    <Wrapper onClick={props.isDisable ? () => {} : onClick} {...rest}>
+      {props.isDisable && <S.Block>{children}</S.Block>}
       {children}
-    </S.Wrapper>
+    </Wrapper>
   );
 }
