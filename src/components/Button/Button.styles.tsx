@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { darken } from "polished";
+import { darken, lighten } from "polished";
 
 import * as T from "./Button.types";
 
@@ -15,6 +15,7 @@ export const Wrapper = styled.button<{ isDisable?: boolean }>`
   border-radius: 10px;
   border: 0;
   cursor: pointer;
+  transition: 0.1s background;
 `;
 
 export const DefaultButton = styled(Wrapper)`
@@ -25,11 +26,11 @@ export const DefaultButton = styled(Wrapper)`
     !props.isDisable &&
     `
       :hover {
-        background: ${darken(0.1, props.theme.background.button)};
+        background: ${lighten(0.1, props.theme.background.button)};
       }
       
       :active {
-        background: ${darken(0.2, props.theme.background.button)};
+        background: ${darken(0.1, props.theme.background.button)};
       }
     `}
 `;
