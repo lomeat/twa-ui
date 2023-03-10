@@ -4,6 +4,10 @@ import styled from "styled-components";
 import { useThemeProvider } from "hooks";
 import { Button } from "components";
 
+import { Icon } from "./assets/icon";
+// import IconSvg from "./assets/icon.svg";
+// import { ReactComponent as Logo } from "./assets/icon.svg";
+
 /**
  * Demo scene for testing and presenting components
  *
@@ -27,6 +31,18 @@ export function Demo() {
             Button
           </Button>
           <Button align="right" onClick={() => {}}>
+            Button
+          </Button>
+          <H3>With icon and its align</H3>
+          <Button iconAlign="right" icon={<Icon />} onClick={() => {}}>
+            Button
+          </Button>
+          <Button
+            iconAlign="left"
+            align="left"
+            icon={<Icon />}
+            onClick={() => {}}
+          >
             Button
           </Button>
         </Container>

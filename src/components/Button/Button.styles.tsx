@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { darken } from "polished";
 
+import * as T from "./Button.types";
+
 export const Wrapper = styled.button<{ isDisable?: boolean }>`
   padding: 16px;
   width: 100%;
@@ -45,7 +47,20 @@ export const Block = styled(Wrapper)`
   left: 0;
 `;
 
-export const Container = styled.div<{ align?: "left" | "center" | "right" }>`
+export const Container = styled.div<{
+  align?: T.ButtonAlign;
+  iconAlign?: T.IconAlign;
+}>`
   width: 100%;
-  text-align: ${(props) => props.align};
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: ${(props) =>
+    props.align === "left"
+      ? "flex-start"
+      : props.align === "right"
+      ? "flex-end"
+      : props.align ?? "center"};
+  flex-direction: ${(props) =>
+    props.iconAlign === "right" ? "row-reverse" : "row"};
 `;
