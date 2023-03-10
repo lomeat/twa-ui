@@ -10,8 +10,10 @@ export function App() {
   return (
     <ThemeProvider>
       <Wrapper>
-        <Button>Button</Button>
-        <Button>Button</Button>
+        <Button onClick={() => {}}>Button</Button>
+        <Button isDisable onClick={() => {}}>
+          Button
+        </Button>
       </Wrapper>
       <ChangeThemeButton onClick={() => changeTheme()}>T</ChangeThemeButton>
     </ThemeProvider>
