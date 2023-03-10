@@ -4,7 +4,12 @@ import styled from "styled-components";
 import { useThemeProvider } from "hooks";
 import { Button } from "components";
 
-export function App() {
+/**
+ * Demo scene for testing and presenting components
+ *
+ * @returns demo
+ */
+export function Demo() {
   const { changeTheme, ThemeProvider } = useThemeProvider();
 
   return (
