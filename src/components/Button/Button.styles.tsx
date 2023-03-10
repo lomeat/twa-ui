@@ -39,14 +39,6 @@ export const DisableButton = styled(Wrapper)`
   color: ${(props) => props.theme.text.default};
 `;
 
-export const Block = styled(Wrapper)`
-  background: rgba(0, 0, 0, 0.05);
-  color: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-`;
-
 export const Container = styled.div<{
   align?: T.ButtonAlign;
   iconAlign?: T.IconAlign;

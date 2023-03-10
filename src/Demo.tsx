@@ -41,7 +41,8 @@ export function Demo() {
             iconAlign="left"
             align="left"
             icon={<Icon />}
-            onClick={() => {}}
+            onClick={() => console.log("clicked")}
+            isDisable
           >
             Button
           </Button>

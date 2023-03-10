@@ -15,7 +15,6 @@ export function Button({
 
   return (
     <Wrapper onClick={isDisable ? () => {} : onClick}>
-      {isDisable && <S.Block>{children}</S.Block>}
       <S.Container align={align} iconAlign={iconAlign}>
         {icon}
         {children}
