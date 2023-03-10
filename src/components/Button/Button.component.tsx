@@ -12,7 +12,8 @@ export function Button(props: ButtonProps) {
   const { children, onClick, ...rest } = props;
 
   return (
-    <S.Wrapper onClick={onClick} {...rest}>
+    <S.Wrapper onClick={props.isDisable ? () => {} : onClick} {...rest}>
+      {props.isDisable && <S.Block />}
       {children}
     </S.Wrapper>
   );
