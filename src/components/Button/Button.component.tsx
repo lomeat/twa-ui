@@ -6,17 +6,18 @@ type ButtonProps = {
   isDisable?: boolean;
   onClick: (value?: unknown) => void;
   children: React.ReactNode;
+  align?: ButtonAlign;
 };
 
-export function Button(props: ButtonProps) {
-  const { children, onClick, ...rest } = props;
+type ButtonAlign = "left" | "right" | "center";
 
-  const Wrapper = props.isDisable ? S.DisableButton : S.DefaultButton;
+export function Button({ children, onClick, align, isDisable }: ButtonProps) {
+  const Wrapper = isDisable ? S.DisableButton : S.DefaultButton;
 
   return (
-    <Wrapper onClick={props.isDisable ? () => {} : onClick} {...rest}>
-      {props.isDisable && <S.Block>{children}</S.Block>}
-      {children}
+    <Wrapper onClick={isDisable ? () => {} : onClick}>
+      {isDisable && <S.Block>{children}</S.Block>}
+      <S.Container align={align}>{children}</S.Container>
     </Wrapper>
   );
 }

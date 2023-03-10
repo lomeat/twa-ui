@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { darken } from "polished";
 
 export const Wrapper = styled.button<{ isDisable?: boolean }>`
-  padding: 14px 90px;
+  padding: 16px;
+  width: 100%;
   position: relative;
 
   font-size: 12px;
@@ -42,4 +43,9 @@ export const Block = styled(Wrapper)`
   position: absolute;
   top: 0;
   left: 0;
+`;
+
+export const Container = styled.div<{ align?: "left" | "center" | "right" }>`
+  width: 100%;
+  text-align: ${(props) => props.align};
 `;

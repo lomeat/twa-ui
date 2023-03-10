@@ -17,6 +17,13 @@ export function App() {
           <Button isDisable onClick={() => {}}>
             Button
           </Button>
+          <H3>Align buttons</H3>
+          <Button align="left" onClick={() => {}}>
+            Button
+          </Button>
+          <Button align="right" onClick={() => {}}>
+            Button
+          </Button>
         </Container>
       </Wrapper>
       <ChangeThemeButton onClick={() => changeTheme()}>T</ChangeThemeButton>
@@ -38,7 +45,7 @@ const Wrapper = styled.div`
 const Container = styled.div<{ height: number }>`
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 200px;
   height: ${(props) => props.height}px;
   align-items: flex-start;
   padding: 20px;
