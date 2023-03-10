@@ -7,6 +7,7 @@ export type ButtonProps = {
   align?: ButtonAlign;
   icon?: React.ReactNode;
   iconAlign?: IconAlign;
+  className?: string;
 };
 
 export type ButtonAlign = "left" | "right" | "center";
