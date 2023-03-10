@@ -59,3 +59,15 @@ export const Nickname = styled.span`
   font-family: "SF-Light", sans-serif;
   color: ${(props) => props.theme.text.hint};
 `;
+
+export const ClickableContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+`;
+
+export const Hotkey = styled.span`
+  font-family: "SF-Light", sans-serif;
+  font-size: 12px;
+  color: ${(props) => props.theme.text.hint};
+`;

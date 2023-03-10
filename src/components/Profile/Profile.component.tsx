@@ -11,8 +11,23 @@ export function Profile({
   avatarUrl,
   className,
   onClick,
+  hotkey,
 }: T.ProfileProps) {
   const Wrapper = onClick ? S.WrapperClickable : S.Wrapper;
+
+  function handleKeyDown(e: any) {
+    if (e.key === hotkey) {
+      onClick?.();
+    }
+  }
+
+  React.useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
 
   return (
     <Wrapper className={className} onClick={onClick}>
@@ -23,7 +38,10 @@ export function Profile({
           <S.Nickname>{nickname}</S.Nickname>
         </S.Names>
       </S.Container>
-      {onClick && <ArrowIcon />}
+      <S.ClickableContainer>
+        <S.Hotkey>{hotkey?.toUpperCase()}</S.Hotkey>
+        {onClick && <ArrowIcon />}
+      </S.ClickableContainer>
     </Wrapper>
   );
 }

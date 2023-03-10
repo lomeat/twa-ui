@@ -61,6 +61,7 @@ export function Demo() {
             onClick={() => {
               console.log("profile clicked");
             }}
+            hotkey="p"
           />
         </Container>
       </Wrapper>
