@@ -11,9 +11,10 @@ export function Profile({
   avatarUrl,
   className,
   isArrow,
+  onClick,
 }: T.ProfileProps) {
   return (
-    <S.Wrapper className={className}>
+    <S.Wrapper className={className} onClick={onClick}>
       <S.Container>
         <S.Avatar src={avatarUrl} />
         <S.Names>

@@ -4,4 +4,5 @@ export type ProfileProps = {
   avatarUrl?: string;
   className?: string;
   isArrow?: boolean;
+  onClick?: (value?: unknown) => void;
 };
