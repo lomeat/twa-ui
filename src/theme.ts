@@ -9,6 +9,7 @@ export const lightTheme: Theme = {
     default: "black",
     button: "#222431",
     link: "#6DDBB8",
+    hint: "#E2E2E4",
   },
 };
 
@@ -23,6 +24,7 @@ export const darkTheme: Theme = {
     default: "#E2E2E4",
     button: "#222431",
     link: "#6DDBB8",
+    hint: "#E2E2E4",
   },
 };
 

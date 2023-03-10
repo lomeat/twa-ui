@@ -11,5 +11,6 @@ type Theme = {
     default: string;
     button: string;
     link: string;
+    hint: string;
   };
 };

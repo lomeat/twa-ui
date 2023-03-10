@@ -3,10 +3,9 @@ import styled from "styled-components";
 
 import { useThemeProvider } from "hooks";
 import { Button } from "components";
+import { Profile } from "components";
 
 import { Icon } from "./assets/icon";
-// import IconSvg from "./assets/icon.svg";
-// import { ReactComponent as Logo } from "./assets/icon.svg";
 
 /**
  * Demo scene for testing and presenting components
@@ -47,6 +46,9 @@ export function Demo() {
             Button
           </Button>
         </Container>
+        <Container height={300}>
+          <Profile name="Michael" nickname="@lomeat" />
+        </Container>
       </Wrapper>
       <ChangeThemeButton onClick={() => changeTheme()}>T</ChangeThemeButton>
     </ThemeProvider>
@@ -60,7 +62,7 @@ const Wrapper = styled.div`
   padding: 40px;
   box-sizing: border-box;
 
-  display: grid;
+  display: flex;
   gap: 20px;
 `;
 
