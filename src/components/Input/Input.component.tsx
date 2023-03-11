@@ -14,6 +14,17 @@ function getInput(type?: T.InputType) {
   }
 }
 
+/**
+ * Input and Textarea.
+ *
+ * value - standart input value (string)
+ * onChange - standart onchange (callback)
+ * placeholder (string)
+ * type - type of container ('input' / 'textarea')
+ * isDisable - disabled (boolean)
+ *
+ * @returns - Wrapped result-input of chosen type
+ */
 export function Input<T>({
   value,
   onChange,

@@ -6,6 +6,14 @@ type TitleProps = {
   href?: string;
 };
 
+/**
+ * Title. Like span. But with possibility use external link.
+ *
+ * href - link to other webapp (string)
+ * children - text (string)
+ *
+ * @returns - Text
+ */
 export function Title({ children, href }: TitleProps) {
   const a = (
     <A href={href} type="_blank">
