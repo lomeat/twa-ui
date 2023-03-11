@@ -1,15 +1,15 @@
 export const lightTheme: Theme = {
   background: {
-    default: "#ccc",
-    wrapper: "#eee",
-    button: "blue",
+    default: "#eee",
+    wrapper: "#ddd",
+    button: "#6CC1E3",
     gray: "#eeeeee",
   },
   text: {
-    default: "black",
-    button: "#eee",
+    default: "#1D1F2A",
+    button: "#E6E9EF",
     link: "#6DDBB8",
-    hint: "#E2E2E4",
+    hint: "#aaa",
   },
 };
 

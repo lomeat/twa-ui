@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { useThemeProvider } from "hooks";
-import { Button, Profile, Input } from "components";
+import { Button, Profile, Input, Title } from "components";
 
 import { ExmapleIcon } from "./assets/example-icon";
 
@@ -94,6 +94,14 @@ export function Demo() {
               onChange={(e) => {}}
               isDisable
             />
+          </Container>
+        </Column>
+        <Column>
+          <Container>
+            <H3>Text title</H3>
+            <Title>Title</Title>
+            <H3>Link title</H3>
+            <Title href="https://github.com/lomeat">Link</Title>
           </Container>
         </Column>
       </Wrapper>
