@@ -2,8 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { useThemeProvider } from "hooks";
-import { Button } from "components";
-import { Profile } from "components";
+import { Button, Profile, Input } from "components";
 
 import { ExmapleIcon } from "./assets/example-icon";
 
@@ -15,39 +14,48 @@ import { ExmapleIcon } from "./assets/example-icon";
 export function Demo() {
   const { changeTheme, ThemeProvider, isDark } = useThemeProvider();
 
+  const [inputValue, setInputValue] = React.useState<string>("");
+
+  function handleInputChange(e: any) {
+    const { value } = e.target;
+    setInputValue(value);
+  }
+
   return (
     <ThemeProvider>
       <Wrapper>
-        <Container height={570}>
-          <H3>Primary default button</H3>
-          <Button onClick={() => {}}>Button</Button>
-          <H3>Disabled button</H3>
-          <Button isDisable onClick={() => {}}>
-            Button
-          </Button>
-          <H3>Align buttons</H3>
-          <Button align="left" onClick={() => {}}>
-            Button
-          </Button>
-          <Button align="right" onClick={() => {}}>
-            Button
-          </Button>
-          <H3>With icon and its align</H3>
-          <Button iconAlign="right" icon={<ExmapleIcon />} onClick={() => {}}>
-            Button
-          </Button>
-          <Button
-            iconAlign="left"
-            align="left"
-            icon={<ExmapleIcon />}
-            onClick={() => console.log("clicked")}
-            isDisable
-          >
-            Button
-          </Button>
-        </Container>
         <Column>
-          <Container height={240}>
+          <Container>
+            <H3>Primary default button</H3>
+            <Button onClick={() => {}}>Button</Button>
+            <H3>Disabled button</H3>
+            <Button isDisable onClick={() => {}}>
+              Button
+            </Button>
+            <H3>Align buttons</H3>
+            <Button align="left" onClick={() => {}}>
+              Button
+            </Button>
+            <Button align="right" onClick={() => {}}>
+              Button
+            </Button>
+            <H3>With icon and its align</H3>
+            <Button iconAlign="right" icon={<ExmapleIcon />} onClick={() => {}}>
+              Button
+            </Button>
+            <Button
+              iconAlign="left"
+              align="left"
+              icon={<ExmapleIcon />}
+              onClick={() => console.log("clicked")}
+              isDisable
+            >
+              Button
+            </Button>
+          </Container>
+        </Column>
+        <Column>
+          <Container>
             <H3>Profile's header</H3>
             <Profile
               name="Michael"
@@ -65,8 +73,27 @@ export function Demo() {
               }}
             />
           </Container>
-          <Container height={300}>
+          <Container>
             <H3>Input</H3>
+            <Input
+              placeholder="Nickname"
+              value={inputValue}
+              onChange={handleInputChange}
+            />
+            <H3>Textarea</H3>
+            <Input
+              placeholder="Enter"
+              value={"qwe"}
+              onChange={(e) => {}}
+              type="textarea"
+            />
+            <H3>Disabled input</H3>
+            <Input
+              placeholder="Enter..."
+              value=""
+              onChange={(e) => {}}
+              isDisable
+            />
           </Container>
         </Column>
       </Wrapper>
@@ -93,11 +120,10 @@ export const Column = styled.div`
   flex-direction: column;
 `;
 
-const Container = styled.div<{ height: number }>`
+const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 200px;
-  height: ${(props) => props.height}px;
   align-items: flex-start;
   padding: 20px;
   gap: 20px;
